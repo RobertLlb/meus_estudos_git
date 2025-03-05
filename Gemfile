@@ -61,3 +61,25 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'httparty'
+gem 'dotenv-rails'
+gem 'bootstrap', '~> 5.3'
+gem 'jquery-rails'
+gem 'font-awesome-rails'
+gem 'sassc-rails'
+gem 'simple_form'
+gem 'devise'
+gem 'pry'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-stack_explorer'
+gem 'pry-rescue'
+gem 'pry-remote'
+gem 'pry-coolline'
+gem 'pry-theme'
+gem 'pry-clipboard'
+gem 'pry-awesome_print'
+gem 'pry-pretty-numeric'
+gem 'pry-exception_explorer'

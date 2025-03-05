@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4 display-4">Gerador de Comandos Git com IA</h1>
+
+          <% if flash[:success] %>
+            <div class="alert alert-success">
+              <%= flash[:success] %>
+            </div>
+          <% end %>
+
+          <% if flash[:error] %>
+            <div class="alert alert-danger">
+              <%= flash[:error] %>
+            </div>
+          <% end %>
+
+          <%= form_with url: generate_command_path, method: :post, class: "mb-4" do |form| %>
+            <div class="mb-3">
+              <%= form.label :description, "Descreva o que você deseja fazer:", class: "form-label" %>
+              <%= form.text_area :description, rows: 3, class: "form-control", placeholder: "Ex: Inicializar um repositório Git" %>
+            </div>
+            <div class="d-grid">
+              <%= form.submit "Gerar Comando Git", class: "btn btn-primary btn-lg" %>
+            </div>
+          <% end %>
+
+          <% if @git_command %>
+            <div class="mt-4">
+              <h2 class="h4">Comando Gerado:</h2>
+              <div class="alert alert-success">
+                <pre class="mb-0"><code><%= @git_command %></code></pre>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
